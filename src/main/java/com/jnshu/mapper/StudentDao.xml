@@ -15,4 +15,12 @@
     <delete id="deleteStrudent" parameterType="int">
 
     </delete>
+
+    <update id="updateStudent" parameterType="Student">
+
+    </update>
+
+    <select id="countStudent" parameterType="Student" resultType="Integer">
+
+    </select>
 </mapper>

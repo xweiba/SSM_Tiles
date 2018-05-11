@@ -14,6 +14,8 @@ public class Student {
     private byte isWork;
     private byte isSuper;
     private String stuProfession;
+    private Long create_by;
+    private Long update_by;
     private Long create_at;
     private Long update_at;
 
@@ -26,9 +28,27 @@ public class Student {
                 ", isWork=" + isWork +
                 ", isSuper=" + isSuper +
                 ", stuProfession='" + stuProfession + '\'' +
+                ", create_by=" + create_by +
+                ", update_by=" + update_by +
                 ", create_at=" + create_at +
                 ", update_at=" + update_at +
                 '}';
+    }
+
+    public Long getCreate_by() {
+        return create_by;
+    }
+
+    public void setCreate_by(Long create_by) {
+        this.create_by = create_by;
+    }
+
+    public Long getUpdate_by() {
+        return update_by;
+    }
+
+    public void setUpdate_by(Long update_by) {
+        this.update_by = update_by;
     }
 
     public Long getId() {

@@ -12,6 +12,12 @@ public class Profession {
     private String proName;
     private String proIntroduction;
     private String proCompany;
+    private byte proDifficulty;
+    private byte proThreshold;
+    private Integer proSalary_min;
+    private Integer proSalary_max;
+    private Long create_by;
+    private Long update_by;
     private Long create_at;
     private Long update_at;
 
@@ -22,9 +28,65 @@ public class Profession {
                 ", proName='" + proName + '\'' +
                 ", proIntroduction='" + proIntroduction + '\'' +
                 ", proCompany='" + proCompany + '\'' +
+                ", proDifficulty=" + proDifficulty +
+                ", proThreshold=" + proThreshold +
+                ", proSalary_min=" + proSalary_min +
+                ", proSalary_max=" + proSalary_max +
+                ", create_by=" + create_by +
+                ", update_by=" + update_by +
                 ", create_at=" + create_at +
                 ", update_at=" + update_at +
                 '}';
+    }
+
+    public Integer getProSalary_min() {
+        return proSalary_min;
+    }
+
+    public void setProSalary_min(Integer proSalary_min) {
+        this.proSalary_min = proSalary_min;
+    }
+
+    public Integer getProSalary_max() {
+        return proSalary_max;
+    }
+
+    public void setProSalary_max(Integer proSalary_max) {
+        this.proSalary_max = proSalary_max;
+    }
+
+    public byte getProDifficulty() {
+        return proDifficulty;
+    }
+
+    public void setProDifficulty(byte proDifficulty) {
+        this.proDifficulty = proDifficulty;
+    }
+
+    public byte getProThreshold() {
+        return proThreshold;
+    }
+
+    public void setProThreshold(byte proThreshold) {
+        this.proThreshold = proThreshold;
+    }
+
+
+
+    public Long getCreate_by() {
+        return create_by;
+    }
+
+    public void setCreate_by(Long create_by) {
+        this.create_by = create_by;
+    }
+
+    public Long getUpdate_by() {
+        return update_by;
+    }
+
+    public void setUpdate_by(Long update_by) {
+        this.update_by = update_by;
     }
 
     public Long getId() {

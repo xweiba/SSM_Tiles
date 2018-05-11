@@ -8,6 +8,8 @@ import com.jnshu.service.ServiceManage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @program: SSM_Tiles
  * @description: Service实现
@@ -21,4 +23,28 @@ public class ServiceManageImpl implements ServiceManage{
     StudentDao studentDao;
     @Autowired
     ProfessionDao professionDao;
+
+    public Student findByIdStudent(Integer id) {
+        return null;
+    }
+
+    public List<Student> findListStudent() {
+        return null;
+    }
+
+    public boolean insertStudent(Student student) {
+        return false;
+    }
+
+    public boolean deleteStudent(Integer id) {
+        return false;
+    }
+
+    public boolean updateStudent(Student student) {
+        return false;
+    }
+
+    public Integer countStudent(Student student) {
+        return null;
+    }
 }
