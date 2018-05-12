@@ -4,6 +4,8 @@ import com.jnshu.mapper.ProfessionDao;
 import com.jnshu.mapper.StudentDao;
 import com.jnshu.modle.Profession;
 import com.jnshu.modle.Student;
+import com.jnshu.modle.StudentStatistics;
+import com.jnshu.modle.StundetCustom;
 import com.jnshu.service.ServiceManage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,8 +30,8 @@ public class ServiceManageImpl implements ServiceManage{
         return null;
     }
 
-    public List<Student> findListStudent() {
-        return null;
+    public List<StundetCustom> findListStudent() {
+        return studentDao.findListStudent();
     }
 
     public boolean insertStudent(Student student) {
@@ -44,7 +46,17 @@ public class ServiceManageImpl implements ServiceManage{
         return false;
     }
 
-    public Integer countStudent(Student student) {
-        return null;
+    public StudentStatistics countStudent() {
+        Integer countStudent = studentDao.countStudent();
+        Integer countWork = studentDao.countWork();
+        StudentStatistics studentStatistics = new StudentStatistics();
+        studentStatistics.setCountStudent(countStudent);
+        studentStatistics.setWorkStundet(countWork);
+        return studentStatistics;
     }
+
+    public List<Profession> findByListProfession() {
+        return professionDao.findByListProfession();
+    }
+
 }

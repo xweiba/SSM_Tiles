@@ -10,9 +10,10 @@ package com.jnshu.modle;
 public class Student {
     private Long id;
     private String stuName;
+    private String stuTitle;
     private String stuIntroduction;
-    private byte isWork;
-    private byte isSuper;
+    private Boolean isWork;
+    private Boolean isSuper;
     private String stuProfession;
     private Long create_by;
     private Long update_by;
@@ -24,6 +25,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", stuName='" + stuName + '\'' +
+                ", stuTitle='" + stuTitle + '\'' +
                 ", stuIntroduction='" + stuIntroduction + '\'' +
                 ", isWork=" + isWork +
                 ", isSuper=" + isSuper +
@@ -33,22 +35,6 @@ public class Student {
                 ", create_at=" + create_at +
                 ", update_at=" + update_at +
                 '}';
-    }
-
-    public Long getCreate_by() {
-        return create_by;
-    }
-
-    public void setCreate_by(Long create_by) {
-        this.create_by = create_by;
-    }
-
-    public Long getUpdate_by() {
-        return update_by;
-    }
-
-    public void setUpdate_by(Long update_by) {
-        this.update_by = update_by;
     }
 
     public Long getId() {
@@ -75,19 +61,28 @@ public class Student {
         this.stuIntroduction = stuIntroduction;
     }
 
-    public byte getIsWork() {
+    public Boolean getIsWork() {
         return isWork;
     }
 
-    public void setIsWork(byte isWork) {
+    public void setIsWork(Boolean isWork) {
         this.isWork = isWork;
     }
 
-    public byte getIsSuper() {
+    public String getStuTitle() {
+        return stuTitle;
+    }
+
+    public void setStuTitle(String stuTitle) {
+        this.stuTitle = stuTitle;
+    }
+
+
+    public Boolean getIsSuper() {
         return isSuper;
     }
 
-    public void setIsSuper(byte isSuper) {
+    public void setIsSuper(Boolean isSuper) {
         this.isSuper = isSuper;
     }
 
@@ -97,6 +92,22 @@ public class Student {
 
     public void setStuProfession(String stuProfession) {
         this.stuProfession = stuProfession;
+    }
+
+    public Long getCreate_by() {
+        return create_by;
+    }
+
+    public void setCreate_by(Long create_by) {
+        this.create_by = create_by;
+    }
+
+    public Long getUpdate_by() {
+        return update_by;
+    }
+
+    public void setUpdate_by(Long update_by) {
+        this.update_by = update_by;
     }
 
     public Long getCreate_at() {

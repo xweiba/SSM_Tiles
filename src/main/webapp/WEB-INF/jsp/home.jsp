@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
         <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
@@ -80,11 +81,11 @@
 
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
             <p>
-                <img src="${pageContext.request.contextPath }/static/imges/453254312.png">12400<br>
+                <img src="${pageContext.request.contextPath }/static/imges/453254312.png">${studentQV.studentStatistics.countStudent}<br>
                 <span class="up-3">累计在线学习人数</span>
             </p>
             <p>
-                <img src="${pageContext.request.contextPath }/static/imges/453254312.png">12400<br>
+                <img src="${pageContext.request.contextPath }/static/imges/453254312.png">${studentQV.studentStatistics.workStundet}<br>
                 <span class="up-3">学员已经找到满意工作</span>
             </p>
         </div>
@@ -132,7 +133,7 @@
             <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
                 <span class="up-1 text-center">8</span>
                 <p class="up-2">完成职业 技能，升级业界大牛</p>
-                <span class="up-3 invisible"></span>
+                <span class="up-3"></span>
             </li>
         </ul>
     </div>
@@ -141,38 +142,17 @@
     <div class="main-c row">
         <h3 class="text-center main-tab">优秀学员展示</h3>
         <ul class="list-unstyled text-center">
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div>
-                    <img src="${pageContext.request.contextPath }/static/imges/242424.png">
-                    <span>技术顾问:罗大佑</span>
-                    <p class="text-left">百度技术总监：互联网基础服务领域，从事虚拟主机，云主机，域名。
-                        曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
-                </div>
-            </li>
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div>
-                    <img src="${pageContext.request.contextPath }/static/imges/242424.png">
-                    <span>技术顾问:罗大佑</span>
-                    <p class="text-left">百度技术总监：互联网基础服务领域，从事虚拟主机，云主机，域名。
-                        曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
-                </div>
-            </li>
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div>
-                    <img src="${pageContext.request.contextPath }/static/imges/242424.png">
-                    <span>技术顾问:罗大佑</span>
-                    <p class="text-left">百度技术总监：互联网基础服务领域，从事虚拟主机，云主机，域名。
-                        曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
-                </div>
-            </li>
-            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                <div>
-                    <img src="${pageContext.request.contextPath }/static/imges/242424.png">
-                    <span>技术顾问:罗大佑</span>
-                    <p class="text-left">百度技术总监：互联网基础服务领域，从事虚拟主机，云主机，域名。
-                        曾任新网高级技术经理，负责技术研发，团队管理与建设。</p>
-                </div>
-            </li>
+            <c:forEach items="${studentQV.studentList}" var="student">
+                <c:if test="${student.isSuper}">
+                    <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                        <div>
+                            <img src="${pageContext.request.contextPath }/static/imges/242424.png">
+                            <span>${student.stuTitle}:${student.stuName}</span>
+                            <p class="text-left">${student.stuIntroduction}</p>
+                        </div>
+                    </li>
+                </c:if>
+            </c:forEach>
         </ul>
     </div>
     <!--第四部分开始-->

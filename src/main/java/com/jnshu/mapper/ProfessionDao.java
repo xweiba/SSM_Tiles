@@ -7,7 +7,7 @@ import java.util.List;
 public interface ProfessionDao {
     Profession findByIdProfession(int id);
     List<Profession> findByListProfession();
-    boolean deleteByIdProfession(int id);
+/*    boolean deleteByIdProfession(int id);
     int insertByProfession(Profession profession);
-    boolean updateByProfession(Profession profession);
+    boolean updateByProfession(Profession profession);*/
 }

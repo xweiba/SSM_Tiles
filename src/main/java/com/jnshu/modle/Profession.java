@@ -16,6 +16,7 @@ public class Profession {
     private byte proThreshold;
     private Integer proSalary_min;
     private Integer proSalary_max;
+    private Long proCount;
     private Long create_by;
     private Long update_by;
     private Long create_at;
@@ -32,6 +33,7 @@ public class Profession {
                 ", proThreshold=" + proThreshold +
                 ", proSalary_min=" + proSalary_min +
                 ", proSalary_max=" + proSalary_max +
+                ", proCount=" + proCount +
                 ", create_by=" + create_by +
                 ", update_by=" + update_by +
                 ", create_at=" + create_at +
@@ -39,54 +41,12 @@ public class Profession {
                 '}';
     }
 
-    public Integer getProSalary_min() {
-        return proSalary_min;
+    public Long getProCount() {
+        return proCount;
     }
 
-    public void setProSalary_min(Integer proSalary_min) {
-        this.proSalary_min = proSalary_min;
-    }
-
-    public Integer getProSalary_max() {
-        return proSalary_max;
-    }
-
-    public void setProSalary_max(Integer proSalary_max) {
-        this.proSalary_max = proSalary_max;
-    }
-
-    public byte getProDifficulty() {
-        return proDifficulty;
-    }
-
-    public void setProDifficulty(byte proDifficulty) {
-        this.proDifficulty = proDifficulty;
-    }
-
-    public byte getProThreshold() {
-        return proThreshold;
-    }
-
-    public void setProThreshold(byte proThreshold) {
-        this.proThreshold = proThreshold;
-    }
-
-
-
-    public Long getCreate_by() {
-        return create_by;
-    }
-
-    public void setCreate_by(Long create_by) {
-        this.create_by = create_by;
-    }
-
-    public Long getUpdate_by() {
-        return update_by;
-    }
-
-    public void setUpdate_by(Long update_by) {
-        this.update_by = update_by;
+    public void setProCount(Long proCount) {
+        this.proCount = proCount;
     }
 
     public Long getId() {
@@ -119,6 +79,54 @@ public class Profession {
 
     public void setProCompany(String proCompany) {
         this.proCompany = proCompany;
+    }
+
+    public byte getProDifficulty() {
+        return proDifficulty;
+    }
+
+    public void setProDifficulty(byte proDifficulty) {
+        this.proDifficulty = proDifficulty;
+    }
+
+    public byte getProThreshold() {
+        return proThreshold;
+    }
+
+    public void setProThreshold(byte proThreshold) {
+        this.proThreshold = proThreshold;
+    }
+
+    public Integer getProSalary_min() {
+        return proSalary_min;
+    }
+
+    public void setProSalary_min(Integer proSalary_min) {
+        this.proSalary_min = proSalary_min;
+    }
+
+    public Integer getProSalary_max() {
+        return proSalary_max;
+    }
+
+    public void setProSalary_max(Integer proSalary_max) {
+        this.proSalary_max = proSalary_max;
+    }
+
+    public Long getCreate_by() {
+        return create_by;
+    }
+
+    public void setCreate_by(Long create_by) {
+        this.create_by = create_by;
+    }
+
+    public Long getUpdate_by() {
+        return update_by;
+    }
+
+    public void setUpdate_by(Long update_by) {
+        this.update_by = update_by;
     }
 
     public Long getCreate_at() {
