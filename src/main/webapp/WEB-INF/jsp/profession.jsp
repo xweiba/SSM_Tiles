@@ -24,7 +24,7 @@
                 <div class="warp-border">
                     <div class="clearfix">
                         <div class="icon-people"><img
-                                src="${pageContext.request.contextPath }/static/imges/687.png">
+                                src="${pageContext.request.contextPath }/static/images/687.png">
                         </div>
                         <div class="text">
                             <h4 class="">${profession.proName}</h4>
@@ -36,10 +36,10 @@
                     <div class="warp-class2">
                         <div class="warp-class2-text">
                             <div class="iconfont text-padding">门槛 :
-                                    <%-- for 循环 --%>
+                                <%-- for 循环 --%>
                                 <c:forEach begin="1"
                                            end="${profession.proDifficulty}"><img
-                                        src="${pageContext.request.contextPath }/static/imges/xx.png"></c:forEach>
+                                        src="${pageContext.request.contextPath }/static/images/xx.png"></c:forEach>
                             </div>
                         </div>
                         <div class="warp-class2-text">
@@ -48,7 +48,7 @@
                                     <%-- for 循环 --%>
                                 <c:forEach begin="1"
                                            end="${profession.proThreshold}"><img
-                                        src="${pageContext.request.contextPath }/static/imges/xx.png"></c:forEach>
+                                        src="${pageContext.request.contextPath }/static/images/xx.png"></c:forEach>
                             </div>
                         </div>
                     </div>

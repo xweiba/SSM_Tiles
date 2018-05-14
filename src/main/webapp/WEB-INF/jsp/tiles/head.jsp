@@ -1,15 +1,31 @@
+<%@ taglib prefix="title" uri="http://tiles.apache.org/tags-tiles" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: zhou
+  Date: 2018/5/14
+  Time: 15:36
+  To change this template use File | Settings | File Templates.
+--%>
 <%-- 编码格式 一定要加, 不然乱码 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<div class="container  hidden-xs">
-    <div class="row header-top">
-        <p class="col-xs-12 col-sm-6 col-md-6 col-lg-6">客服电话:010-594-78634</p>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-            <div>
-                <a href="#" target="_blank"> <img alt=""  src="${pageContext.request.contextPath }/static/imges/54537.png"></a>
-                <a href="#" target="_blank"><img alt=""  src="${pageContext.request.contextPath }/static/imges/45678678.png"></a>
-                <a href="#" target="_blank"> <img alt=""  src="${pageContext.request.contextPath }/static/imges/54375483543.png"></a>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+
+<%-- css js --%>
+<link href="${pageContext.request.contextPath }/static/css/t11.css"
+      rel="stylesheet" type="text/css">
+<link href=${pageContext.request.contextPath }/static/css/bootstrap.min.css
+      rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/static/css/base.css"
+      rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/static/css/bootstrap.css">
+<link href="${pageContext.request.contextPath }/static/css/Untitled-3.css"
+      rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath }/static/css/Untitled-1base.css"
+      rel="stylesheet" type="text/css">
+
+<script src="${pageContext.request.contextPath }/static/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath }/static/js/bootstrap.min.js"></script>
