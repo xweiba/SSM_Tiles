@@ -7,7 +7,8 @@
     <!-- definition name 为Controller 返回的页面名称 这里定义一个基础模板页 -->
     <definition name="home" template="/WEB-INF/jsp/tiles/templet.jsp">
         <put-attribute name="title" value="首页"/>
-        <put-attribute name="header" value="/WEB-INF/jsp/tiles/head.jsp"/>
+        <put-attribute name="head" value="/WEB-INF/jsp/tiles/head.jsp"/>
+        <put-attribute name="top" value="/WEB-INF/jsp/tiles/top.jsp"/>
         <put-attribute name="nav" value="/WEB-INF/jsp/tiles/homeNav.jsp"/>
         <put-attribute name="body" value="/WEB-INF/jsp/home.jsp"/>
         <!-- {1} 取的是Controller 返回的值 -->
@@ -26,5 +27,18 @@
         <!-- 跳转页面 -->
         <put-attribute name="dumpPage" value="home"/>
     </definition>
+
+    <!-- 登陆页面 必须定义模板-->
+    <definition name="login" template="/WEB-INF/jsp/tiles/logintemplet.jsp">
+        <put-attribute name="title" value="登陆"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/login.jsp"/>
+    </definition>
+
+    <!-- 登陆验证 测试 -->
+<!--
+    <definition name="manage" extends="profession">
+        <put-attribute name="title" value="管理"/>
+    </definition>
+-->
 
 </tiles-definitions>
