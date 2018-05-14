@@ -2,10 +2,8 @@ package com.jnshu.service.impl;
 
 import com.jnshu.mapper.ProfessionDao;
 import com.jnshu.mapper.StudentDao;
-import com.jnshu.modle.Profession;
-import com.jnshu.modle.Student;
-import com.jnshu.modle.StudentStatistics;
-import com.jnshu.modle.StundetCustom;
+import com.jnshu.mapper.UserAuthDao;
+import com.jnshu.modle.*;
 import com.jnshu.service.ServiceManage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +23,8 @@ public class ServiceManageImpl implements ServiceManage{
     StudentDao studentDao;
     @Autowired
     ProfessionDao professionDao;
+    @Autowired
+    UserAuthDao userAuthDao;
 
     public Student findByIdStudent(Integer id) {
         return null;
@@ -57,6 +57,19 @@ public class ServiceManageImpl implements ServiceManage{
 
     public List<Profession> findByListProfession() {
         return professionDao.findByListProfession();
+    }
+
+    public boolean userAuth(UserAuth userAuth) {
+        return userAuthDao.userAuth(userAuth);
+    }
+
+    public UserAuth findUserAuthByName(String au_username) {
+        return userAuthDao.findUserAuthbyName(au_username);
+    }
+
+    @Override
+    public Boolean findUserAuthByid(Integer id) {
+        return userAuthDao.findUserAuthByid(id);
     }
 
 }
