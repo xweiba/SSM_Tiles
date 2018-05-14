@@ -36,4 +36,16 @@
     </bean>-->
 
     <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <!-- 登录认证拦截器 -->
+        <mvc:interceptor>
+            <!--/** 表示所有url包括子url路径 -->
+            <mvc:mapping path="/u/**"/>
+            <bean class="com.jnshu.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
